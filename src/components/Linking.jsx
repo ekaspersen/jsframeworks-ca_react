@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import CheckoutPage from "./pages/CheckoutPage";
-import CheckoutPageSuccess from "./pages/CheckoutPageSuccess";
-import ProductPage from "./pages/ProductPage";
-import ContactPage from "./pages/ContactPage";
-import Shop from "./pages/Shop";
+import CheckoutPage from "../pages/CheckoutPage";
+import CheckoutPageSuccess from "../pages/CheckoutPageSuccess";
+import ProductPage from "../pages/ProductPage";
+import ContactPage from "../pages/ContactPage";
+import ShoppingPage from "../pages/ShoppingPage";
 
 export default function Linking() {
     return (
         <Routes>
-            <Route index element={<Shop />} />
-            <Route path="product/420" element={<ProductPage />} />
+            <Route path="/" element={<ShoppingPage />} />
+            <Route path="shop/:id" element={<ProductPage />} />
             <Route path="Checkout" element={<CheckoutPage />} />
             <Route path="CheckoutSuccess" element={<CheckoutPageSuccess />} />
             <Route path="Contact" element={<ContactPage />} />
