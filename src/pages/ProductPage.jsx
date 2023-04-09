@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchProductsById } from "../store/modules/productsSlice";
 import { addToCart } from "../store/modules/cartSlice";
-import Shop from "../components/Shop";
 
 function ProductPage() {
     const dispatch = useDispatch();

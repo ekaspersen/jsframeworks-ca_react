@@ -16,7 +16,18 @@ function Shop() {
     };
 
     return (
-        <main>
+        <main className="inner">
+            {/* if this comment is here, here is what i was thinking about doing for the searchbar:
+                    - create it here, track what i write by using similar states as with the contact from
+                    then map on items only if it has the same value as the searchbar. i am very tired right now, 
+                    hopefully i've done this before you, the teacher looks
+            */}
+            <input
+                type="search"
+                name="searchBar"
+                id="searchBar"
+                placeholder="Search"
+            />
             <div className="products-wrapper">
                 {memoizedProducts.map((product) => (
                     <div key={product.id} className="product-card">
