@@ -9,7 +9,7 @@ export default function Linking() {
     return (
         <Routes>
             <Route path="/" element={<ShoppingPage />} />
-            <Route path="/:id" element={<ProductPage />} />
+            <Route path=":id" element={<ProductPage />} />
             <Route path="Checkout" element={<CheckoutPage />} />
             <Route
                 path="Checkout/CheckoutSuccess"

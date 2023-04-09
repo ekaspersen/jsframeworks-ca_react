@@ -87,6 +87,7 @@ function CheckoutPage() {
 
                         <Link
                             className="w-fit mx-auto"
+                            onClick={handleClearCart}
                             to="/Checkout/CheckoutSuccess"
                         >
                             <span className="btn inline-block">Buy</span>

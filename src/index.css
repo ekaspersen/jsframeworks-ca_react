@@ -23,7 +23,7 @@ a {
 }
 .btn,
 .btn_shadow {
-    @apply py-2 px-4 rounded-full;
+    @apply py-2 px-4 rounded-full max-w-fit;
 }
 .btn {
     @apply bg-primary text-black;
@@ -80,15 +80,33 @@ a {
     @apply flex justify-between align-top;
 }
 /* Productpage.css */
+.single-product_wrapper {
+    @apply flex flex-col lg:flex-row  my-4 w-full max-w-6xl mx-auto px-2 gap-4;
+}
 .single-product_title {
     @apply text-4xl font-extrabold;
+}
+.single-product_img {
+    max-height: 380px;
+    @apply rounded-3xl object-cover;
+}
+@media screen and(min-width:850px) {
+    .single-product_img {
+        height: 600px;
+    }
+}
+.single-product_text-wrapper {
+    @apply flex flex-col  flex-1 justify-around;
+}
+.single-product_info {
+    @apply flex flex-col gap-4;
 }
 /* Checkoutpage.css */
 .cart-container {
     @apply flex flex-col inner gap-4;
 }
 .cart-wrapper {
-    @apply flex flex-col lg:flex-row lg:flex-row-reverse  my-16;
+    @apply flex flex-col lg:flex-row my-16;
 }
 .cart-wrapper > div {
     flex: 1;
@@ -139,9 +157,6 @@ a {
 .contact-form {
     @apply flex flex-col gap-4 w-full max-w-lg mx-auto;
 }
-.contact-form h2 {
-    @apply mb-8;
-}
 .input-wrapper {
     @apply flex flex-col;
 }
@@ -156,7 +171,7 @@ input {
     @apply border-b focus:border-b-4;
 }
 textarea {
-    @apply border mb-8 focus:border-4;
+    @apply border focus:border-4;
 }
 /* Footer.css */
 footer {
