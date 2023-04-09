@@ -9,9 +9,12 @@ export default function Linking() {
     return (
         <Routes>
             <Route path="/" element={<ShoppingPage />} />
-            <Route path="shop/:id" element={<ProductPage />} />
+            <Route path="/:id" element={<ProductPage />} />
             <Route path="Checkout" element={<CheckoutPage />} />
-            <Route path="CheckoutSuccess" element={<CheckoutPageSuccess />} />
+            <Route
+                path="Checkout/CheckoutSuccess"
+                element={<CheckoutPageSuccess />}
+            />
             <Route path="Contact" element={<ContactPage />} />
             <Route path="*" element={<div>Route not found</div>} />
         </Routes>

@@ -2,6 +2,7 @@ import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../store/modules/productsSlice";
+import { addToCart } from "../store/modules/cartSlice";
 function Shop() {
     const dispatch = useDispatch();
     const { products } = useSelector((state) => state.products);
@@ -10,6 +11,10 @@ function Shop() {
         dispatch(fetchProducts());
     }, [dispatch]);
     const memoizedProducts = useMemo(() => products, [products]);
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+    };
+
     return (
         <main>
             <div className="products-wrapper">
@@ -35,13 +40,18 @@ function Shop() {
                                 : product.discountedPrice}
                             $
                         </p>
-                        <div className="product-card_actions-wrapper">
-                            <Link to={`shop/${product.id}`}>
+                        <div className="product-card_actions-wrapper mt-auto">
+                            <Link to={product.id}>
                                 <button className="btn_shadow">
                                     More info
                                 </button>
                             </Link>
-                            <button className="btn">Add to Cart</button>
+                            <button
+                                onClick={() => handleAddToCart(product)}
+                                className="btn"
+                            >
+                                Add to Cart
+                            </button>
                         </div>
                     </div>
                 ))}

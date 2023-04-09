@@ -7,8 +7,13 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: "#adff8f",
+                primary: "#34D89D",
+                danger: "#f00",
                 black: "#121212",
+            },
+            screens: {
+                sm: "560px",
+                lg: "850px",
             },
         },
     },
