@@ -33,7 +33,7 @@ function ContactPage() {
             <h1 className="shopping-page_h1">Contact</h1>
             <div className="contact-form-wrapper">
                 <form onSubmit={formik.handleSubmit} className="contact-form">
-                    <h2 className="text-2xl font-bold">Get in touch:</h2>
+                    <h2 className="text-2xl font-bold">Write a message!</h2>
                     {/* name input */}
                     <div className="input-wrapper">
                         <label htmlFor="contactName">Name:</label>
