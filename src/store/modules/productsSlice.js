@@ -41,13 +41,6 @@ export const fetchProductsById = (id) => async (dispatch) => {
         const data = await response.json();
         dispatch(SetSingleProduct(data));
     } catch (error) {
-        // handle any errors that occur during the fetch
-        console.log("here error happened :( ");
         return console.error(error.message);
-    }
-    if (response.ok) {
-        console.log("the response is correct");
-    } else {
-        console.log("the response is not ok");
     }
 };
